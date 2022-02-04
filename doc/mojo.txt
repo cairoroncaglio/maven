@@ -1,0 +1,9 @@
+https://maven.apache.org/guides/plugin/guide-java-plugin-development.html
+
+mvn archetype:generate \
+  -DgroupId=sample.plugin \
+  -DartifactId=hello-maven-plugin \
+  -DarchetypeGroupId=org.apache.maven.archetypes \
+  -DarchetypeArtifactId=maven-archetype-plugin
+
+mvn groupId:artifactId:version:goal

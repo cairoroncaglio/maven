@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+
+        <artifactId>mvn-project</artifactId>
+
+        <groupId>com.mvn</groupId>
+
+        <version>1.0-SNAPSHOT</version>
+
+    </parent>
+
+    <artifactId>mvn-core</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>mvn-core</name>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>mvn-commons</module>
+        <module>mvn-mojo</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.maven</groupId>
+                <artifactId>maven-mojo</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <configuration>
+                    <mojovalue>PARAMETER FROM POM.XML</mojovalue>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>mojo-name</goal>
+                            <goal>mojo-example</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
