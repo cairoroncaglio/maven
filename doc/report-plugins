@@ -1,0 +1,26 @@
+https://maven.apache.org/plugins/maven-project-info-reports-plugin/dependencies-mojo.html
+
+O plugin Project Info Reports tem os seguintes objetivos:
+
+project-info-reports:ci-management é usado para gerar o relatório de Gerenciamento de Integração Contínua do Projeto.
+project-info-reports:dependencies é usado para gerar o relatório de dependências do projeto.
+project-info-reports:dependency-convergence é usado para gerar o relatório de Convergência de Dependência do Projeto para compilações (reator).
+project-info-reports:dependency-info é usado para gerar trechos de código a serem adicionados às ferramentas de construção.
+project-info-reports:dependency-management é usado para gerar o relatório Project Dependency Management.
+project-info-reports:distribution-management é usado para gerar o relatório Project Distribution Management.
+project-info-reports:help é usado para exibir informações de ajuda no plug-in de relatórios de informações do projeto.
+project-info-reports:index é usado para gerar a página de índice do projeto.
+project-info-reports:issue-management é usado para gerar o relatório Project Issue Management.
+project-info-reports:licenses é usado para gerar o relatório de Licenças de Projeto.
+project-info-reports:mailing-lists é usado para gerar o relatório de listas de discussão do projeto.
+project-info-reports:modules é usado para gerar o relatório de Módulos do Projeto.
+project-info-reports:plugin-management é usado para gerar o relatório Project Plugin Management.
+project-info-reports:plugins é usado para gerar o relatório Project Plugins.
+project-info-reports:team é usado para gerar o relatório da Equipe do Projeto.
+project-info-reports:scm é usado para gerar o relatório Project Source Code Management.
+project-info-reports:summary é usado para gerar o relatório de resumo do projeto.
+
+-------------------------------------------------------------------------------------
+mvn project-info-reports:dependencies
+-------------------------------------------------------------------------------------
+

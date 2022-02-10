@@ -1,0 +1,21 @@
+     <dependency>
+        <groupId></groupId>
+        <artifactId></artifactId>
+        <version></version>
+        <scope> ? </scope>
+     </dependency>
+
+     <scope>: ?
+
+     -compile: dependência disponivel em todas as fases de build e empacotamento.
+     -test: somente durante a fase de compilação e execução de testes.
+     -runtime: requerido em execução e teste da aplicação. Não requerido na compilação.
+     -provided: quando se espera que o JDK ou um container providencie a dependência.
+     -system: igual ao provided porém dentro do sistema de arquivos locais.
+
+     *default scope: compile
+     <dependency>
+        <groupId></groupId>
+        <artifactId></artifactId>
+        <version></version>
+     </dependency>

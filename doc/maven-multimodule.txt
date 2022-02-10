@@ -1,19 +1,21 @@
-1. Generating Parent POM
+Project Object Model- POM
+
+1. Gerar parent POM
 mvn archetype:generate -DgroupId=org.baeldung -DartifactId=parent-project
 
-2.Once the parent is generated, we have to open the pom.xml file located in the parent's directory and change the packaging to pom.
+2.Configurando parent POM defini-lo como POM(gerenciador de outros arquivos POM.
 <packaging>pom</packaging>
 
-3. Creating Submodules
+3. Criar sub-módulos
 cd parent-project
 mvn archetype:generate -DgroupId=org.baeldung  -DartifactId=core
 mvn archetype:generate -DgroupId=org.baeldung  -DartifactId=service
 mvn archetype:generate -DgroupId=org.baeldung  -DartifactId=webapp
 
-4.Add this 'parent' into pom.xml of submodules if not declared
+4.Adicionar o parent POM nos arquivos POM dos sub-módulos.
 <parent>
-    <groupId>org.baeldung</groupId>
-    <artifactId>parent-project</artifactId>
+    <groupId>PARENT-groupId</groupId>
+    <artifactId>PARENT-artifactId</artifactId>
     <version>1.0-SNAPSHOT</version>
 </parent>
 

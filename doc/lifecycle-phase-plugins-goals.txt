@@ -1,63 +1,55 @@
-    /**
-         *LifeCycle > Phases > Plugins > Goals
-         **/
+-LifeCycle > Phases > Plugins > Goals
 
-        /**
-         * LifeCycle:
-         * default: ciclo de vida trata da implantação do seu projeto.
-         * clean: ciclo de vida trata da limpeza do projeto.
-         * site: ciclo de vida trata da criação do site do seu projeto.
-         *
-         * Um lifecycle de compilação é composto de fases.
-         * -default:
-         * validate - validar se o projeto está correto e todas as informações necessárias estão disponíveis
-         * compile - compilar o código fonte do projeto
-         * test- testar o código-fonte compilado usando uma estrutura de teste de unidade adequada. Esses testes não devem exigir que o código seja empacotado ou implantado
-         * package - pegue o código compilado e empacote-o em seu formato distribuível, como um JAR.
-         * verify - executar quaisquer verificações nos resultados dos testes de integração para garantir que os critérios de qualidade sejam atendidos
-         * install - instale o pacote no repositório local, para uso como dependência em outros projetos localmente
-         * deploy - feito no ambiente de compilação, copia o pacote final para o repositório remoto para compartilhamento com outros desenvolvedores e projetos.
-         **/
+1.LifeCycle:
+* default: ciclo de vida trata da implantação do seu projeto.
+* clean: ciclo de vida trata da limpeza do projeto.
+* site: ciclo de vida trata da criação do site do seu projeto.
 
-        /**Phases: validate, compile, test, package, verify, install, deploy.
-         *Quando chamada uma phase, todas as fases anteriores relacionadas ao lifecycle default são executadas.
+* Um lifecycle de compilação é composto de fases.
+* -default:
+* validate - validar se o projeto está correto e todas as informações necessárias estão disponíveis
+* compile - compilar o código fonte do projeto
+* test- testar o código-fonte compilado usando uma estrutura de teste de unidade adequada. Esses testes não devem exigir que o código seja empacotado ou implantado
+* package - pegue o código compilado e empacote-o em seu formato distribuível, como um JAR.
+* verify - executar quaisquer verificações nos resultados dos testes de integração para garantir que os critérios de qualidade sejam atendidos
+* install - instale o pacote no repositório local, para uso como dependência em outros projetos localmente
+* deploy - feito no ambiente de compilação, copia o pacote final para o repositório remoto para compartilhamento com outros desenvolvedores e projetos.
 
-         * Phase verify:
-         mvn verify
-              1.validate
-              2.compile
-              3.test
-              4.package
-              5.verify
 
-         * Phase compile :
-          mvn compile:
-            1.validate
-            2.compile
 
-         **/
+2.Phases: validate, compile, test, package, verify, install, deploy.
+ex:.mvn help:describe -Dcmd=compile
 
-        /**Core Plugins:
-             clean.
-             compiler.
-             deploy.
-             install.
-             resources.
-             verifier.
-             mvn [plugin-name]:[goal-name]
-             mvn [compiler]:[compile]
-             mvn clean:clean
-         **/
+Quando chamada uma phase, todas as fases anteriores relacionadas ao lifecycle default são executadas:
 
-        /**Goals:
-             mvn [plugin-name]:[goal-name]
-             compiler:compile
-             compiler:testCompile
-             surefire:test
-             install:install
-         **/
+mvn verify
+1.validate
+2.compile
+3.test
+4.package
+5.verify
 
-     /**MORE:
-      * mvn help:describe -Dcmd=PHASENAME
-      * **/
-    }
+mvn compile:
+1.validate
+2.compile
+
+
+
+3.Core Plugins:
+mvn [plugin-name]:[goal-name]
+*clean.mvn clean:clean
+*compiler.mvn [compiler]:[compile]
+*deploy.
+*install.
+*resources.
+*verifier.
+
+
+4.Goals:
+mvn [plugin-name]:[goal-name]
+compiler:compile
+compiler:testCompile
+surefire:test
+install:install
+
+mvn install:help

@@ -1,0 +1,57 @@
+https://maven.apache.org/plugins/maven-dependency-plugin/usage.html
+
+dependency:copy
+dependency:copy-dependencies
+dependency:unpack
+dependency:unpack-dependencies
+
+dependency:resolve
+dependency:sources
+dependency:resolve-plugins
+dependency:go-offline
+dependency:purge-local-repository
+dependency:analyze
+dependency:analyze-dep-mgt
+dependency:analyze-report
+dependency:tree
+dependency:build-classpath
+dependency:list-repositories
+dependency:get
+
+-------------------------------------------------------------------------------------
+mvn dependency:analyze
+[WARNING] Unused declared dependencies found:
+[WARNING]    junit:junit:jar:4.11:test
+[WARNING]    org.apache.maven.plugins:maven-assembly-plugin:maven-plugin:3.3.0:compile
+-------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------
+mvn dependency:tree
+
+Essa meta é usada para visualizar a hierarquia de dependências do projeto que está sendo construído no momento.
+Ele produzirá a árvore de dependências resolvidas que o processo de compilação do Maven realmente usa.
+Opcionalmente, o parâmetro de saída pode ser especificado para desviar a saída para um arquivo:
+
+mvn dependency:tree - DoutputFile = /path/ to / file
+
+Além disso, o parâmetro outputType pode ser usado para gerar diferentes formatos de saída.
+Os seguintes formatos são atualmente suportados:
+*text*dot*graphml*tgf
+
+mvn dependency:tree -DoutputFile=/path/to/file.graphml -DoutputType=graphml
+mvn dependency:tree -DoutputFile=/path/to/file.txt -DoutputType=text
+
+# multi-module
+mvn dependency:tree -DappendOutput=true -DoutputFile=/path/to/deps.txt
+-------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------
+mvn dependency:list-repositories
+
+Esse objetivo é usado para listar todos os repositórios dos quais esta compilação depende.
+Ele mostrará repositórios definidos em suas configurações, poms e declarados em poms de dependência transitiva.
+
+-------------------------------------------------------------------------------------
+
+
+

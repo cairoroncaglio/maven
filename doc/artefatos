@@ -1,0 +1,7 @@
+-Um artefato é um arquivo, geralmente um JAR, que é implementado em um repositório Maven.
+-Uma construção do Maven produz um ou mais artefatos, como um JAR compilado e um JAR de "origem".
+
+-Cada artefato possui:
+    * ID de grupo (geralmente um nome de domínio invertido, como com.example.foo)
+    * ID de artefato (apenas um nome)
+    * sequência de versões. Os três juntos identificam exclusivamente o artefato.
